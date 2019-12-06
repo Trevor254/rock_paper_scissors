@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-                   function computerPlay() {
+                   function computerPlay() { //this function will enable the computer to randomly pick a number which will attribute to either rock , paper, or scissors
                 
                 let result = (Math.floor(Math.random() * 10)) % 3;
                 if (result == 0) {
@@ -19,10 +19,10 @@
                 }
             }
             
-            function playerPlay() {
+            function playerPlay() { //this function returns a prompt for the user to select either rock, paper or scissors
                 return prompt("Select rock, paper, or scissors.").toLowerCase();
             }
-            function playRound(playerSelection, computerSelection) {
+            function playRound(playerSelection, computerSelection) { // this function facilitates the game play using conditional statements
                 if (playerSelection == "rock" && computerSelection == "Paper") {
                     return "You lose! Paper beats Rock!";
                 } else if (playerSelection == "rock" && computerSelection == "Scissors") {
@@ -39,7 +39,7 @@
                     return "It's a tie! Both picked " + computerSelection + ".";
                 }
             }
-            function game() {
+            function game() { //function will output the winner between the player and the computer using a for loop
                 let computerScore = 0, playerScore = 0, winner = "";
                 for (let i = 0; i < 5; i++) {
                     winner = playRound(playerPlay(), computerPlay());
